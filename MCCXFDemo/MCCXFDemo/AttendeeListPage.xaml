@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="MCCXFDemo.AttendeeListPage"
+    xmlns:local="clr-namespace:MCCXFDemo;assembly=MCCXFDemo">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:MealImageValueConverter x:Key="mealImageValueConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" x:Name="AddButton"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="5, 20, 5, 20">
+            <ListView x:Name="attendeeList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding FirstName}"/>
+                                <Label Text="{Binding LastName}"/>
+                                <Image Source="{Binding MealsIncluded, Converter={StaticResource mealImageValueConverter}}" HorizontalOptions="EndAndExpand"/>                           </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

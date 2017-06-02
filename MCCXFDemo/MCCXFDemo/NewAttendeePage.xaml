@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MCCXFDemo.NewAttendeePage">
+	<ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="5,20,5,20">
+            <Entry x:Name="FirstName" Placeholder="First Name"/>
+            <Entry x:Name="LastName" Placeholder="Last Name"/>
+            <Label Text="Meals Included"/>
+            <Switch x:Name="MealsIncluded"/>
+            <Picker x:Name="ShirtSize" Title="Shirt Size"/>
+            <Button x:Name="RegisterButton" Text="Register"/>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

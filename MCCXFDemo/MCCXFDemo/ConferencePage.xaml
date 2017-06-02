@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="MCCXFDemo.ConferencePage"
+    xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Attendees" x:Name="AttendeeListButton"/>
+    </ContentPage.ToolbarItems>
+	<ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand" Padding="20">
+            <Label Text="Music City Code" FontSize="40" FontAttributes="Bold"/>
+            <maps:Map WidthRequest="320" HeightRequest="200" x:Name="ConferenceMap" MapType="Street"/>
+            <Label Text="Vanderbilt University"/>
+            <Label Text="Nashville, Tennessee"/>
+            <Button x:Name="SessionListButton" Text="Sessions"/>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

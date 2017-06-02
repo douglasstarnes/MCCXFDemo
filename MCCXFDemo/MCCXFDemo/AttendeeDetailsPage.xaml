@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MCCXFDemo.AttendeeDetailsPage">
+	<ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Text="First Name" Grid.Row="0" Grid.Column="0"/>
+            <Label Text="Last Name" Grid.Row="1" Grid.Column="0"/>
+            <Label Text="Shirt Size" Grid.Row="2" Grid.Column="0"/>
+            <Label Text="Meals" Grid.Row="3" Grid.Column="0"/>
+            <Label Text="{Binding FirstName}" Grid.Row="0" Grid.Column="1"/>
+            <Label Text="{Binding LastName}" Grid.Row="1" Grid.Column="1"/>
+            <Label Text="{Binding ShirtSize}" Grid.Row="2" Grid.Column="1"/>
+            <Label Text="{Binding MealsIncluded}" Grid.Row="3" Grid.Column="1"/>
+        </Grid>
+	</ContentPage.Content>
+</ContentPage>
